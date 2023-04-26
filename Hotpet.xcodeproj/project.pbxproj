@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		021285DD29EB3D2A000C055F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021285DC29EB3D2A000C055F /* LocationManager.swift */; };
+		0232781E29E7593900338435 /* HotpetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232781D29E7593900338435 /* HotpetApp.swift */; };
+		0232782029E75CB200338435 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232781F29E75CB200338435 /* ProfilView.swift */; };
+		0232782229E7674000338435 /* LikeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232782129E7674000338435 /* LikeViewModel.swift */; };
+		0232782429E7677200338435 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232782329E7677200338435 /* Like.swift */; };
+		023C79B4299A483C00086BCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023C79B3299A483C00086BCB /* Assets.xcassets */; };
+		023C79B7299A483C00086BCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023C79B6299A483C00086BCB /* Preview Assets.xcassets */; };
+		023C79C4299A49C000086BCB /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79BD299A49BF00086BCB /* MyProfileView.swift */; };
+		023C79C5299A49C000086BCB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79BE299A49C000086BCB /* CardView.swift */; };
+		023C79C6299A49C000086BCB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79BF299A49C000086BCB /* HomeView.swift */; };
+		023C79C7299A49C000086BCB /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79C0299A49C000086BCB /* LikesView.swift */; };
+		023C79C8299A49C000086BCB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79C1299A49C000086BCB /* LoadingView.swift */; };
+		023C79C9299A49C000086BCB /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79C2299A49C000086BCB /* ConversationsView.swift */; };
+		023C79D4299A4A4400086BCB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79D2299A4A4400086BCB /* User.swift */; };
+		023C79DB299A4A6C00086BCB /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79D9299A4A6C00086BCB /* CustomModifiers.swift */; };
+		023C79DC299A4A6C00086BCB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79DA299A4A6C00086BCB /* Color.swift */; };
+		023C79E2299A4BC100086BCB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79E1299A4BC100086BCB /* MainView.swift */; };
+		023C79E7299A4D3700086BCB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79E6299A4D3700086BCB /* UserViewModel.swift */; };
+		023C79EB299A4D8400086BCB /* APIServiceError̀.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79E9299A4D8400086BCB /* APIServiceError̀.swift */; };
+		023C79EC299A4D8400086BCB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C79EA299A4D8400086BCB /* APIService.swift */; };
+		024AC26D29D4DCB500425BB5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AC26C29D4DCB500425BB5 /* SettingsView.swift */; };
+		024AC27029D4E29500425BB5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AC26E29D4E29500425BB5 /* Message.swift */; };
+		024AC27129D4E29500425BB5 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AC26F29D4E29500425BB5 /* Conversation.swift */; };
+		024AC27329D4E48000425BB5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AC27229D4E48000425BB5 /* ChatView.swift */; };
+		024AC27529D4E4E500425BB5 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AC27429D4E4E500425BB5 /* ChatViewModel.swift */; };
+		024AC27729D4FB5A00425BB5 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AC27629D4FB5A00425BB5 /* MatchesView.swift */; };
+		0269585E29BC9773000896A9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269585D29BC9773000896A9 /* LoginView.swift */; };
+		0269586029BCA0DA000896A9 /* CustomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269585F29BCA0DA000896A9 /* CustomElements.swift */; };
+		0269586229BCB161000896A9 /* AlertMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269586129BCB161000896A9 /* AlertMaker.swift */; };
+		0269586429BCBD2D000896A9 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269586329BCBD2D000896A9 /* UserSession.swift */; };
+		0269586829BCC252000896A9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269586729BCC252000896A9 /* RegisterView.swift */; };
+		0269586A29BCC5CE000896A9 /* RegisterNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269586929BCC5CE000896A9 /* RegisterNextView.swift */; };
+		029520C329DB76160088D4E1 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029520C229DB76160088D4E1 /* EditProfileView.swift */; };
+		029520C529DB85450088D4E1 /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029520C429DB85450088D4E1 /* SUImagePickerView.swift */; };
+		02A2D44B299B95CF008D0BCB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A2D44A299B95CF008D0BCB /* Constants.swift */; };
+		02BD4EAF29EAD99B00087B67 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD4EAE29EAD99B00087B67 /* SplashScreenView.swift */; };
+		02BD4EB129EB101400087B67 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BD4EB029EB101400087B67 /* CustomSlider.swift */; };
+		02F31F9A299BA52500D896D6 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F31F99299BA52500D896D6 /* DateUtils.swift */; };
+		3603FFF229F95A9500498585 /* introview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3603FFF129F95A9500498585 /* introview.swift */; };
+		3603FFF429F95ACF00498585 /* intromodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3603FFF329F95ACF00498585 /* intromodel.swift */; };
+		C4488EC0018C4B0BD4E41A6D /* Pods_Hotpet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA413C8A6BE432C8FEC28FD6 /* Pods_Hotpet.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		021285DC29EB3D2A000C055F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		0232781D29E7593900338435 /* HotpetApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotpetApp.swift; sourceTree = "<group>"; };
+		0232781F29E75CB200338435 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
+		0232782129E7674000338435 /* LikeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewModel.swift; sourceTree = "<group>"; };
+		0232782329E7677200338435 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		023C79AC299A483900086BCB /* Hotpet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hotpet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		023C79B3299A483C00086BCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		023C79B6299A483C00086BCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		023C79BD299A49BF00086BCB /* MyProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
+		023C79BE299A49C000086BCB /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		023C79BF299A49C000086BCB /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		023C79C0299A49C000086BCB /* LikesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
+		023C79C1299A49C000086BCB /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		023C79C2299A49C000086BCB /* ConversationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
+		023C79D2299A4A4400086BCB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		023C79D9299A4A6C00086BCB /* CustomModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		023C79DA299A4A6C00086BCB /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		023C79E1299A4BC100086BCB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = ../MainView.swift; sourceTree = "<group>"; };
+		023C79E6299A4D3700086BCB /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		023C79E9299A4D8400086BCB /* APIServiceError̀.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIServiceError̀.swift"; sourceTree = "<group>"; };
+		023C79EA299A4D8400086BCB /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		024AC26C29D4DCB500425BB5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		024AC26E29D4E29500425BB5 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		024AC26F29D4E29500425BB5 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		024AC27229D4E48000425BB5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		024AC27429D4E4E500425BB5 /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		024AC27629D4FB5A00425BB5 /* MatchesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
+		0269585D29BC9773000896A9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0269585F29BCA0DA000896A9 /* CustomElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomElements.swift; sourceTree = "<group>"; };
+		0269586129BCB161000896A9 /* AlertMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMaker.swift; sourceTree = "<group>"; };
+		0269586329BCBD2D000896A9 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		0269586729BCC252000896A9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		0269586929BCC5CE000896A9 /* RegisterNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNextView.swift; sourceTree = "<group>"; };
+		029520C229DB76160088D4E1 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		029520C429DB85450088D4E1 /* SUImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUImagePickerView.swift; sourceTree = "<group>"; };
+		02A2D44A299B95CF008D0BCB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		02BD4EAE29EAD99B00087B67 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		02BD4EB029EB101400087B67 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		02E1ED0229EC0C8B00B81165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		02E1ED0329EC0D2000B81165 /* Hotpet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hotpet.entitlements; sourceTree = "<group>"; };
+		02F31F99299BA52500D896D6 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		3603FFF129F95A9500498585 /* introview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = introview.swift; path = "../../../../Documents/untitled folder/onboarding/hotpet/hotpet/introview.swift"; sourceTree = "<group>"; };
+		3603FFF329F95ACF00498585 /* intromodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = intromodel.swift; sourceTree = "<group>"; };
+		6923D21A59DE7D1F7CD3ACE2 /* Pods-Hotpet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotpet.debug.xcconfig"; path = "Target Support Files/Pods-Hotpet/Pods-Hotpet.debug.xcconfig"; sourceTree = "<group>"; };
+		AA413C8A6BE432C8FEC28FD6 /* Pods_Hotpet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hotpet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E35CBFC9A6BC0E2D516E6D13 /* Pods-Hotpet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotpet.release.xcconfig"; path = "Target Support Files/Pods-Hotpet/Pods-Hotpet.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		023C79A9299A483900086BCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4488EC0018C4B0BD4E41A6D /* Pods_Hotpet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		023C79A3299A483900086BCB = {
+			isa = PBXGroup;
+			children = (
+				023C79AE299A483900086BCB /* Hotpet */,
+				023C79AD299A483900086BCB /* Products */,
+				37C5D0396B27058A92332D25 /* Pods */,
+				5815207720667284460A5CF8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		023C79AD299A483900086BCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				023C79AC299A483900086BCB /* Hotpet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		023C79AE299A483900086BCB /* Hotpet */ = {
+			isa = PBXGroup;
+			children = (
+				0232781D29E7593900338435 /* HotpetApp.swift */,
+				02E1ED0329EC0D2000B81165 /* Hotpet.entitlements */,
+				02E1ED0229EC0C8B00B81165 /* Info.plist */,
+				023C79B3299A483C00086BCB /* Assets.xcassets */,
+				023C79E8299A4D7800086BCB /* Api */,
+				023C79CC299A49DE00086BCB /* Model */,
+				023C79CB299A49D600086BCB /* View */,
+				023C79E5299A4D3300086BCB /* ViewModel */,
+				023C79D8299A4A6200086BCB /* Utils */,
+				023C79B5299A483C00086BCB /* Preview Content */,
+			);
+			path = Hotpet;
+			sourceTree = "<group>";
+		};
+		023C79B5299A483C00086BCB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				023C79B6299A483C00086BCB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		023C79CB299A49D600086BCB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02BD4EAE29EAD99B00087B67 /* SplashScreenView.swift */,
+				0269586729BCC252000896A9 /* RegisterView.swift */,
+				0269586929BCC5CE000896A9 /* RegisterNextView.swift */,
+				3603FFF129F95A9500498585 /* introview.swift */,
+				0269585D29BC9773000896A9 /* LoginView.swift */,
+				023C79E1299A4BC100086BCB /* MainView.swift */,
+				023C79BE299A49C000086BCB /* CardView.swift */,
+				023C79BF299A49C000086BCB /* HomeView.swift */,
+				023C79C0299A49C000086BCB /* LikesView.swift */,
+				023C79C1299A49C000086BCB /* LoadingView.swift */,
+				023C79C2299A49C000086BCB /* ConversationsView.swift */,
+				024AC27629D4FB5A00425BB5 /* MatchesView.swift */,
+				023C79BD299A49BF00086BCB /* MyProfileView.swift */,
+				029520C229DB76160088D4E1 /* EditProfileView.swift */,
+				024AC26C29D4DCB500425BB5 /* SettingsView.swift */,
+				024AC27229D4E48000425BB5 /* ChatView.swift */,
+				0232781F29E75CB200338435 /* ProfilView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		023C79CC299A49DE00086BCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3603FFF329F95ACF00498585 /* intromodel.swift */,
+				024AC26F29D4E29500425BB5 /* Conversation.swift */,
+				024AC26E29D4E29500425BB5 /* Message.swift */,
+				023C79D2299A4A4400086BCB /* User.swift */,
+				0232782329E7677200338435 /* Like.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		023C79D8299A4A6200086BCB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				023C79DA299A4A6C00086BCB /* Color.swift */,
+				023C79D9299A4A6C00086BCB /* CustomModifiers.swift */,
+				02A2D44A299B95CF008D0BCB /* Constants.swift */,
+				02F31F99299BA52500D896D6 /* DateUtils.swift */,
+				0269585F29BCA0DA000896A9 /* CustomElements.swift */,
+				0269586129BCB161000896A9 /* AlertMaker.swift */,
+				0269586329BCBD2D000896A9 /* UserSession.swift */,
+				029520C429DB85450088D4E1 /* SUImagePickerView.swift */,
+				02BD4EB029EB101400087B67 /* CustomSlider.swift */,
+				021285DC29EB3D2A000C055F /* LocationManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		023C79E5299A4D3300086BCB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				023C79E6299A4D3700086BCB /* UserViewModel.swift */,
+				024AC27429D4E4E500425BB5 /* ChatViewModel.swift */,
+				0232782129E7674000338435 /* LikeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		023C79E8299A4D7800086BCB /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				023C79EA299A4D8400086BCB /* APIService.swift */,
+				023C79E9299A4D8400086BCB /* APIServiceError̀.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		37C5D0396B27058A92332D25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6923D21A59DE7D1F7CD3ACE2 /* Pods-Hotpet.debug.xcconfig */,
+				E35CBFC9A6BC0E2D516E6D13 /* Pods-Hotpet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5815207720667284460A5CF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA413C8A6BE432C8FEC28FD6 /* Pods_Hotpet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		023C79AB299A483900086BCB /* Hotpet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 023C79BA299A483C00086BCB /* Build configuration list for PBXNativeTarget "Hotpet" */;
+			buildPhases = (
+				9196CF75F190F6A5252B60AA /* [CP] Check Pods Manifest.lock */,
+				023C79A8299A483900086BCB /* Sources */,
+				023C79A9299A483900086BCB /* Frameworks */,
+				023C79AA299A483900086BCB /* Resources */,
+				E4122058204DF9CF6FBC5CF2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hotpet;
+			productName = hotpet;
+			productReference = 023C79AC299A483900086BCB /* Hotpet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		023C79A4299A483900086BCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					023C79AB299A483900086BCB = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 023C79A7299A483900086BCB /* Build configuration list for PBXProject "Hotpet" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 023C79A3299A483900086BCB;
+			productRefGroup = 023C79AD299A483900086BCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				023C79AB299A483900086BCB /* Hotpet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		023C79AA299A483900086BCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023C79B7299A483C00086BCB /* Preview Assets.xcassets in Resources */,
+				023C79B4299A483C00086BCB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9196CF75F190F6A5252B60AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hotpet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4122058204DF9CF6FBC5CF2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hotpet/Pods-Hotpet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hotpet/Pods-Hotpet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hotpet/Pods-Hotpet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		023C79A8299A483900086BCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023C79EC299A4D8400086BCB /* APIService.swift in Sources */,
+				024AC26D29D4DCB500425BB5 /* SettingsView.swift in Sources */,
+				029520C529DB85450088D4E1 /* SUImagePickerView.swift in Sources */,
+				0232782029E75CB200338435 /* ProfilView.swift in Sources */,
+				023C79DB299A4A6C00086BCB /* CustomModifiers.swift in Sources */,
+				0269586A29BCC5CE000896A9 /* RegisterNextView.swift in Sources */,
+				3603FFF229F95A9500498585 /* introview.swift in Sources */,
+				023C79E2299A4BC100086BCB /* MainView.swift in Sources */,
+				0269586829BCC252000896A9 /* RegisterView.swift in Sources */,
+				0232781E29E7593900338435 /* HotpetApp.swift in Sources */,
+				024AC27329D4E48000425BB5 /* ChatView.swift in Sources */,
+				023C79DC299A4A6C00086BCB /* Color.swift in Sources */,
+				024AC27729D4FB5A00425BB5 /* MatchesView.swift in Sources */,
+				0269586229BCB161000896A9 /* AlertMaker.swift in Sources */,
+				023C79C9299A49C000086BCB /* ConversationsView.swift in Sources */,
+				023C79C7299A49C000086BCB /* LikesView.swift in Sources */,
+				02A2D44B299B95CF008D0BCB /* Constants.swift in Sources */,
+				023C79C4299A49C000086BCB /* MyProfileView.swift in Sources */,
+				3603FFF429F95ACF00498585 /* intromodel.swift in Sources */,
+				029520C329DB76160088D4E1 /* EditProfileView.swift in Sources */,
+				023C79C5299A49C000086BCB /* CardView.swift in Sources */,
+				024AC27129D4E29500425BB5 /* Conversation.swift in Sources */,
+				02BD4EB129EB101400087B67 /* CustomSlider.swift in Sources */,
+				02F31F9A299BA52500D896D6 /* DateUtils.swift in Sources */,
+				0269586429BCBD2D000896A9 /* UserSession.swift in Sources */,
+				024AC27529D4E4E500425BB5 /* ChatViewModel.swift in Sources */,
+				02BD4EAF29EAD99B00087B67 /* SplashScreenView.swift in Sources */,
+				0269585E29BC9773000896A9 /* LoginView.swift in Sources */,
+				023C79EB299A4D8400086BCB /* APIServiceError̀.swift in Sources */,
+				023C79E7299A4D3700086BCB /* UserViewModel.swift in Sources */,
+				023C79D4299A4A4400086BCB /* User.swift in Sources */,
+				023C79C6299A49C000086BCB /* HomeView.swift in Sources */,
+				024AC27029D4E29500425BB5 /* Message.swift in Sources */,
+				023C79C8299A49C000086BCB /* LoadingView.swift in Sources */,
+				0232782429E7677200338435 /* Like.swift in Sources */,
+				0269586029BCA0DA000896A9 /* CustomElements.swift in Sources */,
+				0232782229E7674000338435 /* LikeViewModel.swift in Sources */,
+				021285DD29EB3D2A000C055F /* LocationManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		023C79B8299A483C00086BCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		023C79B9299A483C00086BCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		023C79BB299A483C00086BCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6923D21A59DE7D1F7CD3ACE2 /* Pods-Hotpet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Hotpet/Hotpet.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"hotpet/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hotpet/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please provide location to see nearby users";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.hotpet;
+				PRODUCT_NAME = Hotpet;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		023C79BC299A483C00086BCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E35CBFC9A6BC0E2D516E6D13 /* Pods-Hotpet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Hotpet/Hotpet.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"hotpet/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hotpet/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please provide location to see nearby users";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.hotpet;
+				PRODUCT_NAME = Hotpet;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		023C79A7299A483900086BCB /* Build configuration list for PBXProject "Hotpet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				023C79B8299A483C00086BCB /* Debug */,
+				023C79B9299A483C00086BCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		023C79BA299A483C00086BCB /* Build configuration list for PBXNativeTarget "Hotpet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				023C79BB299A483C00086BCB /* Debug */,
+				023C79BC299A483C00086BCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 023C79A4299A483900086BCB /* Project object */;
+}
