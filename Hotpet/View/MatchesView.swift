@@ -16,10 +16,10 @@ struct MatchesView: View {
         VStack {
             SearchBar(text: $searchText)
             List(likeList.filter{
-                searchText.isEmpty ? true : $0.liked!.username.localizedCaseInsensitiveContains(searchText)
+                searchText.isEmpty ? true : $0.liker!.username.localizedCaseInsensitiveContains(searchText)
             }, id: \._id) { like in
-                NavigationLink(destination: ProfileView(user: like.liked!)) {
-                    MatchCell(user: like.liked!)
+                NavigationLink(destination: ProfileView(user: like.liker!)) {
+                    MatchCell(user: like.liker!)
                 }
             }
         }.navigationBarHidden(true)
@@ -33,7 +33,7 @@ struct MatchesView: View {
             if success {
                 likeList = []
                 for like in likes! {
-                    if like.isRight == true && like.isMatch == true {
+                    if like.isRight == true && like.isMatch == false {
                         likeList.append(like)
                     }
                 }
