@@ -27,45 +27,54 @@ struct RegisterView: View {
                     Image("logo_alt")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 250, height: 100)
+                        .frame(width: 200, height: 100)
                         .cornerRadius(10)
                         .shadow(radius: 5)
+                        .padding(.bottom, 30)
+                        .padding(.top, 6)
                     Text("Register")
-                        .font(.largeTitle)
+                        .font(.system(size: 35))
                         .foregroundColor(Color("SecondaryColor"))
+                        .padding(.bottom, 6)
                     Text("Please type your informations")
                         .fontWeight(.light)
-                        .padding(.top, 10)
+                        .padding(.bottom, 50)
+                        
                     VStack(alignment: .leading) {
+                        
                         HStack {
                             Image(systemName: "envelope")
                             TextField("email@example.com", text: $email)
+                                .font(.system(size: 16))
                         }
-                        .padding(15)
-                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 15, tr: 15, bl: 15, br: 0))
-                        .shadow(color: .black, radius: 1)
-                        .frame(width: 270)
-                    }.padding()
+                        .padding(10)
+                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
+                        .shadow(color: .black, radius: 0.7)
+                        .frame(width: 250)
+                        
+                    }.padding(.bottom , 10)
                     VStack(alignment: .leading) {
                         HStack {
                             Image(systemName: "lock")
                             SecureField("Type your password", text: $password)
+                                .font(.system(size: 16))
                         }
-                        .padding(15)
-                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 15, tr: 15, bl: 15, br: 0))
-                        .shadow(color: .black, radius: 1)
-                        .frame(width: 270)
-                    }.padding()
+                        .padding(10)
+                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
+                        .shadow(color: .black, radius: 0.7)
+                        .frame(width: 250)
+                    }.padding(.bottom , 10)
                     VStack(alignment: .leading) {
                         HStack {
                             Image(systemName: "pawprint")
                             TextField("Type your pet's username", text: $username)
+                                .font(.system(size: 16))
                         }
-                        .padding(15)
-                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 15, tr: 15, bl: 15, br: 0))
-                        .shadow(color: .black, radius: 1)
-                        .frame(width: 270)
-                    }.padding()
+                        .padding(10)
+                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
+                        .shadow(color: .black, radius: 0.7)
+                        .frame(width: 250)
+                    }.padding(.bottom , 25)
                     VStack {
                         Button("Next") {
                             next()
@@ -73,7 +82,8 @@ struct RegisterView: View {
                             alert!
                         }.foregroundColor(.white)
                             .padding(10)
-                            .frame(width: 285)
+                            .font(.system(size: 18))
+                            .frame(width: 250)
                             .background(
                                 LinearGradient(
                                     gradient: Gradient(colors: [Color("SecondaryColor"), Color("AccentColor")]),
@@ -81,7 +91,7 @@ struct RegisterView: View {
                                     endPoint: .trailing
                                 )
                             )
-                            .cornerRadius(15)
+                            .cornerRadius(10)
                             .labelStyle(DefaultLabelStyle())
                             .font(.title)
                         NavigationLink(
@@ -99,7 +109,7 @@ struct RegisterView: View {
                         Text("Already have an account ?")
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
-                        Button("Login"){
+                        Button("SIGNIN"){
                             isNavigateToLogin = true
                         }
                         .fullScreenCover(isPresented: $isNavigateToLogin, content: {

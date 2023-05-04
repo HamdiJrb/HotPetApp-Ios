@@ -39,36 +39,40 @@ struct LoginView: View {
                     Image("logo_alt")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 250, height: 250)
-                        .cornerRadius(60)
+                        .frame(width: 200, height: 250)
+                        .cornerRadius(10)
                         .shadow(radius: 5)
-                        .padding(-25)
+                        .padding(.top, -60)
                     Text("Sign in")
-                        .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                        .font(.system(size: 35))
                         .foregroundColor(Color("SecondaryColor"))
+                        .padding(.bottom, 6)
+                        .padding(.top, -25)
                     Text("Please login to your account")
                         .fontWeight(.light)
-                        .padding(.top,-8)
+                        .padding(.bottom,30)
                     VStack(alignment: .leading) {
                         HStack {
                             Image(systemName: "envelope")
                             TextField("Exp: email@example.com", text: $email)
-                                .frame(width: 250)
+                                .font(.system(size: 16))
                         }
-                        .padding(11)
-                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 15, tr: 15, bl: 15, br: 0))
-                        .shadow(color: .black, radius: 1)
-                    }.padding(1)
+                        .padding(10)
+                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
+                        .shadow(color: .black, radius: 0.7)
+                        .frame(width: 250)
+                    }.padding(.bottom , 10)
                     VStack(alignment: .leading) {
                         HStack {
                             Image(systemName: "lock")
                             SecureField("Type your password", text: $password)
-                                .frame(width: 250)
+                                .font(.system(size: 16))
                         }
-                        .padding(12)
-                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 15, tr: 15, bl: 15, br: 0))
-                        .shadow(color: .black, radius: 1)
-                    }.padding(20)
+                        .padding(10)
+                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
+                        .shadow(color: .black, radius: 0.7)
+                        .frame(width: 250)
+                    }.padding(.bottom,30)
                     VStack {
                         Button("Sign In") {
                             login(email: email, password: password)
@@ -76,9 +80,9 @@ struct LoginView: View {
                         .alert(isPresented: $showingAlert) {
                             alert!
                         }
-                        //.frame(maxWidth: .infinity)
-                        .frame(width: 285)
+                        .font(.system(size: 20).weight(.semibold))
                         .padding(10)
+                        .frame(width: 250)
                         .background(
                             LinearGradient(
                                 gradient: Gradient(colors: [Color("SecondaryColor"), Color("AccentColor")]),
@@ -86,18 +90,25 @@ struct LoginView: View {
                                 endPoint: .trailing
                             )
                         )
-                        .cornerRadius(15)
+                        .cornerRadius(10)
                         .foregroundColor(.white)
                         .fullScreenCover(isPresented: $isNextPageActive, content: {
                             MainView()
                         })
-                        .labelStyle(DefaultLabelStyle())
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    }.padding()
+                    }.padding(.bottom, 4)
+                        Text("OR")
+                            .fontWeight(.medium)
+                            .foregroundColor(Color("SecondaryColor"))
+                            .padding(.bottom, 4)
+                    //Spacer(minLength: 20)
+                    GoogleSignInButton(action: handleSignInButton)
+                        .frame(width: 250)
+                        .padding(.bottom, 30)
                     HStack{
                         Text("You don't have an account ?")
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
+                            .font(.system(size: 14))
                         
                         Button("SIGN UP"){
                             isNavigateToSignup = true
@@ -106,10 +117,7 @@ struct LoginView: View {
                             RegisterView()
                         })
                     }
-                    .padding(.top, 30)
-                    /*Spacer(minLength: 20)
-                    GoogleSignInButton(action: handleSignInButton)
-                    Button(action: {
+                    /*Button(action: {
                         facebookLogin()
                     }) {
                         Text("Continue with Facebook")
@@ -176,7 +184,7 @@ struct LoginView: View {
         })
     }
     
-    /*func handleSignInButton() {
+    func handleSignInButton() {
         guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {return}
         
         GIDSignIn.sharedInstance.signIn(
@@ -197,7 +205,7 @@ struct LoginView: View {
             }
     }
     
-    func facebookLogin() {
+    /*func facebookLogin() {
         loginManager.logIn(permissions: permissions, from: nil) { loginResult, error in
             GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, email"]).start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil){

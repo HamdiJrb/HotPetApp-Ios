@@ -31,7 +31,7 @@ struct ProfileView: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 300, height: 300)
+                        .frame(width: 115, height: 115)
                         .clipShape(Circle())
                         .overlay(Circle().stroke(Color.white, lineWidth: 4))
                         .shadow(radius: 10)
@@ -39,7 +39,7 @@ struct ProfileView: View {
                     Image("placeholder-pet")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 150, height: 150)
+                        .frame(width: 115, height: 115)
                         .clipShape(Circle())
                         .overlay(Circle().stroke(Color.white, lineWidth: 4))
                         .shadow(radius: 10)
@@ -47,7 +47,7 @@ struct ProfileView: View {
                 
                 HStack {
                     Text(user.username + ", " + String(DateUtils.getAge(date: user.birthdate)) + "yo").bold()
-                        .font(.custom("Nexa-Bold", size: 30))
+                        .font(.custom("Nexa-Bold", size: 22))
                 }.frame(maxWidth: .infinity, alignment: .center)
                 HStack {
                     Spacer().frame(width: 40)
@@ -67,7 +67,7 @@ struct ProfileView: View {
                         Image(systemName: "info.circle.fill")
                             .font(.system(size: 15, weight: .heavy))
                         Text(user.about)
-                            .font(.system(size: 20))
+                            .font(.system(size: 16))
                     }.frame(maxWidth: .infinity, alignment: .leading)
                     /*HStack {
                      Image(systemName: "person.text.rectangle")
@@ -83,13 +83,13 @@ struct ProfileView: View {
                         Image(systemName: "pawprint.fill")
                             .font(.system(size: 15, weight: .heavy))
                         Text(user.category.description)
-                            .font(.system(size: 20))
+                            .font(.system(size: 16))
                     }.frame(maxWidth: .infinity, alignment: .leading)
                     HStack {
                         Image(systemName: "link")
                             .font(.system(size: 15, weight: .heavy))
                         Text(user.gender.description)
-                            .font(.system(size: 20))
+                            .font(.system(size: 16))
                     }.frame(maxWidth: .infinity, alignment: .leading)
                 }.frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 60)

@@ -36,7 +36,7 @@ struct MyProfileView: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 300, height: 300)
+                        .frame(width: 115, height: 115)
                         .clipShape(Circle())
                         .overlay(Circle().stroke(Color.white, lineWidth: 4))
                         .shadow(radius: 10)
@@ -44,7 +44,7 @@ struct MyProfileView: View {
                     Image("placeholder-pet")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 150, height: 150)
+                        .frame(width: 115, height: 115)
                         .clipShape(Circle())
                         .overlay(Circle().stroke(Color.white, lineWidth: 4))
                         .shadow(radius: 10)
@@ -52,7 +52,7 @@ struct MyProfileView: View {
                 
                 HStack {
                     Text(loadSession()!.username + ", " + String(DateUtils.getAge(date: loadSession()!.birthdate)) + "yo").bold()
-                        .font(.custom("Nexa-Bold", size: 30))
+                        .font(.custom("Nexa-Bold", size: 22))
                 }.frame(maxWidth: .infinity, alignment: .center)
                 ////// // settings button
                 ///
@@ -63,8 +63,8 @@ struct MyProfileView: View {
                         isNavigateToEditProfile = true
                     }.foregroundColor(.white)
                         .padding(3)
-                        .font(.system(size: 15))
-                        .frame(width: 140, height: 35)
+                        .font(.system(size: 14))
+                        .frame(width: 120, height: 30)
                         .background(Color("AccentColor"))
                         .cornerRadius(15)
                         .labelStyle(DefaultLabelStyle())
@@ -80,13 +80,14 @@ struct MyProfileView: View {
                     ){
                         EmptyView()
                     }
+                    Spacer().frame(width: 40)
                     Button("Logout") {
                         resetSession()
                         isNavigateToLogin = true
                     }.foregroundColor(.white)
                         .padding(3)
-                        .font(.system(size: 15))
-                        .frame(width: 140, height: 35)
+                        .font(.system(size: 14))
+                        .frame(width: 120, height: 30)
                         .background(.red)
                         .cornerRadius(15)
                         .labelStyle(DefaultLabelStyle())
@@ -101,7 +102,7 @@ struct MyProfileView: View {
                         Image(systemName: "info.circle.fill")
                             .font(.system(size: 15, weight: .heavy))
                         Text(loadSession()!.about)
-                            .font(.system(size: 20))
+                            .font(.system(size: 16))
                     }.frame(maxWidth: .infinity, alignment: .leading)
                     /*HStack {
                         Image(systemName: "person.text.rectangle")
@@ -117,13 +118,13 @@ struct MyProfileView: View {
                         Image(systemName: "pawprint.fill")
                             .font(.system(size: 15, weight: .heavy))
                         Text(loadSession()!.category.description)
-                            .font(.system(size: 20))
+                            .font(.system(size: 16))
                     }.frame(maxWidth: .infinity, alignment: .leading)
                     HStack {
                         Image(systemName: "link")
                             .font(.system(size: 15, weight: .heavy))
                         Text(loadSession()!.gender.description)
-                            .font(.system(size: 20))
+                            .font(.system(size: 16))
                     }.frame(maxWidth: .infinity, alignment: .leading)
                 }.frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 60)

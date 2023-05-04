@@ -13,7 +13,8 @@ struct LoadingView: View {
     var body: some View {
         ZStack {
             Circle()
-                .foregroundColor(Color.gold.opacity(0.3))
+                .foregroundColor(Color.gold
+                    .opacity(0.3))
                 .frame(width: 100, height: 100)
                 .scaleEffect(animationAmount)
                 .opacity(Double(3 - animationAmount))

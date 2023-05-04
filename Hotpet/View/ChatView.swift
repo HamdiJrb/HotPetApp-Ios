@@ -84,14 +84,14 @@ struct MessageView: View {
                     .foregroundColor(.white)
                     .background(Color.accentColor)
                     .clipShape(ChatBubble(isFromCurrentUser: true))
-            } /*else {
+            } else {
                 Text(message.description)
                     .padding()
                     .foregroundColor(.white)
                     .background(Color.gray)
                     .clipShape(ChatBubble(isFromCurrentUser: false))
                 Spacer()
-            }*/
+            }
         }
     }
 }
@@ -101,7 +101,7 @@ struct ChatBubble: Shape {
     let isFromCurrentUser: Bool
     
     func path(in rect: CGRect) -> Path {
-        let bubblePath = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft, .topRight, isFromCurrentUser ? .bottomLeft : .bottomRight], cornerRadii: CGSize(width: 15, height: 15))
+        let bubblePath = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft, .topRight, isFromCurrentUser ? .bottomLeft : .bottomRight], cornerRadii: CGSize(width: 10, height: 2))
         return Path(bubblePath.cgPath)
     }
 }

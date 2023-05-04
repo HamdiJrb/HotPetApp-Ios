@@ -38,41 +38,52 @@ struct RegisterNextView: View {
                     Image("logo_alt")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 250, height: 100)
-                        .cornerRadius(60)
+                        .frame(width: 200, height: 100)
+                        .cornerRadius(10)
                         .shadow(radius: 5)
                     Text("Complete registration")
-                        .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                        .font(.system(size: 28))
                         .foregroundColor(Color("SecondaryColor"))
+                        .padding(.bottom, 2)
                     Text("Please complete your informations")
                         .fontWeight(.light)
                         .padding(.top, 10)
+                        .padding(.bottom, 40)
                 }
                 VStack() {
                     HStack {
                         Image(systemName: "info.circle")
                         TextField("Type things about your pet", text: $about)
+                            .font(.system(size: 16))
                     }
-                    .padding(15)
+                    .padding(10)
                     .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
-                    .shadow(color: .black, radius: 1)
-                    .frame(width: 300)
-                }.padding()
+                    .shadow(color: .black, radius: 0.7)
+                    .frame(width: 250)
+                }.padding(.bottom, 20)
                 VStack() {
                     Text("Birthdate")
+                        .font(.system(size: 16))
+                        .padding(.bottom,6)
                     VStack(alignment: .leading) {
                         DatePicker(
                             selection: $birthdate,
-                            label: { /*@START_MENU_TOKEN@*/Text("Date")/*@END_MENU_TOKEN@*/ }
+                            label: { Text("")
+                                    .font(.system(size: 12))
+                            }
                         )
-                            .padding(15)
+                        
+                            .padding(8)
                             .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
-                            .shadow(color: .black, radius: 1)
-                            .frame(width: 300)
-                    }.padding()
+                            .shadow(color: .black, radius: 0.7)
+                            .frame(width: 250)
+                            .padding(.bottom,20)
+                    }
                 }
                 VStack() {
                     Text("Gender")
+                        .font(.system(size: 16))
+                        .padding(.bottom,6)
                     VStack(alignment: .leading) {
                         Picker("Gender", selection: $selectedGender
                         ) {
@@ -80,13 +91,15 @@ struct RegisterNextView: View {
                                 Text("\(genders[index].description)")
                             }
                         }
-                        .frame(width: 230)
+                        .frame(width: 250)
                         .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
-                        .shadow(color: .black, radius: 1)
-                    }.padding()
+                        .shadow(color: .black, radius: 0.7)
+                        .padding(.bottom,20)
+                    }
                 }
                 VStack() {
                     Text("Category")
+                        .padding(.bottom,6)
                     VStack(alignment: .leading) {
                         Picker("Category", selection: $selectedCategory
                         ) {
@@ -94,10 +107,10 @@ struct RegisterNextView: View {
                                 Text("\(categories[index].description)")
                             }
                         }
-                        .frame(width: 230)
+                        .frame(width: 250)
                         .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
-                        .shadow(color: .black, radius: 1)
-                    }.padding()
+                        .shadow(color: .black, radius: 0.7)
+                    }.padding(.bottom,35)
                 }
                 VStack {
                     Button("Register") {
