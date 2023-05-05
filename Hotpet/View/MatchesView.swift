@@ -2,7 +2,7 @@
 //  MatchesView.swift
 //  Hotpet
 //
-//  Created by Grim on 13/2/2023.
+//
 //
 
 import SwiftUI
@@ -46,7 +46,7 @@ struct MatchesView: View {
             if success {
                 likeList = []
                 for like in likes! {
-                    if like.isRight == true {//&& like.isMatch == false {
+                    if like.isRight == true && loadSession()!._id! != like.liker?._id {//&& like.isMatch == false {
                         likeList.append(like)
                     }
                 }
@@ -62,6 +62,7 @@ struct MatchCell: View {
     @State private var showingAlert = false
     @State private var alert: Alert?
     @State private var isDislikeButtonVisible = true
+    @State private var isButtonsVisible = true
     
     @State private var isShowingProfile = false
     
@@ -126,40 +127,46 @@ struct MatchCell: View {
             }
             Spacer()
             HStack(spacing: 4) {
-                Button(action: {
-                    alert = AlertMaker.makeAlert(
-                        title: "Success !",
-                        message: "It's a Match !"
-                    )
-                    showingAlert = true
-                    isDislikeButtonVisible = false
-                    like(user: user, isRight: true)
-                }) {
-                    Image("ic_like")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20, height: 20)
-                }
-                Spacer().frame(width: 6)
-                if isDislikeButtonVisible {
-                    Button(action: {
-                        alert = AlertMaker.makeAlert(
-                            title: "OOOPS !",
-                            message: "It's a Dislike"
-                        )
-                        showingAlert = true
-                        
-                        
-                    }) {
-                        Image("ic_dislike")
-                            .renderingMode(.template)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
-                    }
-                                    }
+                if isButtonsVisible {
+                                Button(action: {
+                                    alert = AlertMaker.makeAlert(
+                                        title: "Success !",
+                                        message: "It's a Match !"
+                                    )
+                                    showingAlert = true
+                                    isButtonsVisible = false
+                                    like(user: user, isRight: true)
+                                    /*UserDefaults.standard.set(false, forKey: "isButtonsVisible")*/
+                                }) {
+                                    Image("ic_like")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 20, height: 20)
+                                }
+                                Spacer().frame(width: 6)
+                                Button(action: {
+                                    alert = AlertMaker.makeAlert(
+                                        title: "OOOPS !",
+                                        message: "It's a Dislike"
+                                    )
+                                    showingAlert = true
+                                    isButtonsVisible = false
+                                    /*UserDefaults.standard.set(false, forKey: "isButtonsVisible")*/
+                                }) {
+                                    Image("ic_dislike")
+                                        .renderingMode(.template)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 20, height: 20)
                                 }
                             }
+                        }
+                        /*.onAppear {
+                            if let isButtonsVisible = UserDefaults.standard.object(forKey: "isButtonsVisible") as? Bool {
+                                self.isButtonsVisible = isButtonsVisible
+                            }
+                        }*/
+                    }
                             .background(
                                 NavigationLink(destination: ProfileView(user: user), isActive: $isShowingProfile) {
                                     EmptyView()

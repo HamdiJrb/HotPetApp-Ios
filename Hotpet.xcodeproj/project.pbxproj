@@ -47,6 +47,9 @@
 		02F31F9A299BA52500D896D6 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F31F99299BA52500D896D6 /* DateUtils.swift */; };
 		3603FFF229F95A9500498585 /* introview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3603FFF129F95A9500498585 /* introview.swift */; };
 		3603FFF429F95ACF00498585 /* intromodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3603FFF329F95ACF00498585 /* intromodel.swift */; };
+		36D6DA252A058F3900E2E41A /* reset1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6DA242A058F3900E2E41A /* reset1.swift */; };
+		36D6DA272A05922B00E2E41A /* reset2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6DA262A05922B00E2E41A /* reset2.swift */; };
+		36D6DA292A05928D00E2E41A /* reset3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6DA282A05928D00E2E41A /* reset3.swift */; };
 		C4488EC0018C4B0BD4E41A6D /* Pods_Hotpet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA413C8A6BE432C8FEC28FD6 /* Pods_Hotpet.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +97,9 @@
 		02F31F99299BA52500D896D6 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		3603FFF129F95A9500498585 /* introview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = introview.swift; path = "../../../../Documents/untitled folder/onboarding/hotpet/hotpet/introview.swift"; sourceTree = "<group>"; };
 		3603FFF329F95ACF00498585 /* intromodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = intromodel.swift; sourceTree = "<group>"; };
+		36D6DA242A058F3900E2E41A /* reset1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reset1.swift; sourceTree = "<group>"; };
+		36D6DA262A05922B00E2E41A /* reset2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reset2.swift; sourceTree = "<group>"; };
+		36D6DA282A05928D00E2E41A /* reset3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reset3.swift; sourceTree = "<group>"; };
 		6923D21A59DE7D1F7CD3ACE2 /* Pods-Hotpet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotpet.debug.xcconfig"; path = "Target Support Files/Pods-Hotpet/Pods-Hotpet.debug.xcconfig"; sourceTree = "<group>"; };
 		AA413C8A6BE432C8FEC28FD6 /* Pods_Hotpet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hotpet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E35CBFC9A6BC0E2D516E6D13 /* Pods-Hotpet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotpet.release.xcconfig"; path = "Target Support Files/Pods-Hotpet/Pods-Hotpet.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +180,9 @@
 				024AC26C29D4DCB500425BB5 /* SettingsView.swift */,
 				024AC27229D4E48000425BB5 /* ChatView.swift */,
 				0232781F29E75CB200338435 /* ProfilView.swift */,
+				36D6DA242A058F3900E2E41A /* reset1.swift */,
+				36D6DA262A05922B00E2E41A /* reset2.swift */,
+				36D6DA282A05928D00E2E41A /* reset3.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D6DA292A05928D00E2E41A /* reset3.swift in Sources */,
 				023C79EC299A4D8400086BCB /* APIService.swift in Sources */,
 				024AC26D29D4DCB500425BB5 /* SettingsView.swift in Sources */,
 				029520C529DB85450088D4E1 /* SUImagePickerView.swift in Sources */,
@@ -366,6 +376,7 @@
 				3603FFF229F95A9500498585 /* introview.swift in Sources */,
 				023C79E2299A4BC100086BCB /* MainView.swift in Sources */,
 				0269586829BCC252000896A9 /* RegisterView.swift in Sources */,
+				36D6DA252A058F3900E2E41A /* reset1.swift in Sources */,
 				0232781E29E7593900338435 /* HotpetApp.swift in Sources */,
 				024AC27329D4E48000425BB5 /* ChatView.swift in Sources */,
 				023C79DC299A4A6C00086BCB /* Color.swift in Sources */,
@@ -392,6 +403,7 @@
 				024AC27029D4E29500425BB5 /* Message.swift in Sources */,
 				023C79C8299A49C000086BCB /* LoadingView.swift in Sources */,
 				0232782429E7677200338435 /* Like.swift in Sources */,
+				36D6DA272A05922B00E2E41A /* reset2.swift in Sources */,
 				0269586029BCA0DA000896A9 /* CustomElements.swift in Sources */,
 				0232782229E7674000338435 /* LikeViewModel.swift in Sources */,
 				021285DD29EB3D2A000C055F /* LocationManager.swift in Sources */,

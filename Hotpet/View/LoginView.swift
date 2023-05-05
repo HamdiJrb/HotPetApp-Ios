@@ -22,6 +22,7 @@ struct LoginView: View {
     @State private var showingAlert = false
     @State private var isNextPageActive = false
     @State private var isNavigateToSignup = false
+    @State private var isNavigateToReset1 = false
     
     //@State private var email = "snoupi@gmail.com"
     //@State private var password = "123456"
@@ -72,7 +73,17 @@ struct LoginView: View {
                         .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
                         .shadow(color: .black, radius: 0.7)
                         .frame(width: 250)
-                    }.padding(.bottom,30)
+                    }
+                    .padding(.bottom, 8)
+                    Button("FORGOT PASSWORD ?"){
+                        isNavigateToReset1 = true
+                    }
+                    .font(.system(size: 14).weight(.medium))
+                    .foregroundColor(Color.gray)
+                    .fullScreenCover(isPresented: $isNavigateToReset1, content: {
+                        Reset1View()
+                    })
+                    .padding(.bottom,35)
                     VStack {
                         Button("Sign In") {
                             login(email: email, password: password)
@@ -90,20 +101,19 @@ struct LoginView: View {
                                 endPoint: .trailing
                             )
                         )
-                        .cornerRadius(10)
+                        .cornerRadius(15)
                         .foregroundColor(.white)
                         .fullScreenCover(isPresented: $isNextPageActive, content: {
                             MainView()
                         })
                     }.padding(.bottom, 4)
-                        Text("OR")
+                        /*Text("OR")
                             .fontWeight(.medium)
                             .foregroundColor(Color("SecondaryColor"))
                             .padding(.bottom, 4)
-                    //Spacer(minLength: 20)
                     GoogleSignInButton(action: handleSignInButton)
                         .frame(width: 250)
-                        .padding(.bottom, 30)
+                        .padding(.bottom, 30)*/
                     HStack{
                         Text("You don't have an account ?")
                             .fontWeight(.bold)
@@ -113,6 +123,8 @@ struct LoginView: View {
                         Button("SIGN UP"){
                             isNavigateToSignup = true
                         }
+                        .font(.system(size: 20).weight(.semibold))
+                        .foregroundColor(Color.accentColor)
                         .fullScreenCover(isPresented: $isNavigateToSignup, content: {
                             RegisterView()
                         })

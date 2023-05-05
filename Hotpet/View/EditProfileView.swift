@@ -36,9 +36,10 @@ struct EditProfileView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    Text("Update profile details")
-                        .font(.system(size: 25))
+                    Text("Update your profile details")
+                        .font(.system(size: 24) .weight(.medium))
                         .foregroundColor(Color("SecondaryColor"))
+                        .padding(.bottom, 20)
                     /*VStack(alignment: .leading) {
                         HStack {
                             Image(systemName: "envelope")
@@ -47,45 +48,42 @@ struct EditProfileView: View {
                         .padding(15)
                         .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
                         .shadow(color: .black, radius: 1)
-                    }.padding()*/
+                    }*/
                     VStack(alignment: .leading) {
                         HStack {
                             Image(systemName: "pawprint")
                             TextField("Edit your pet's username", text: $username)
                         }
-                        .font(.system(size: 18))
-                        //.padding(15)
-                        .padding(.vertical, 10) // adjust top and bottom padding values
-                            .padding(.horizontal, 15)
-                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 15, tr: 15, bl: 15, br: 0))
-                        .frame(width: 260)
-                        .shadow(color: .black, radius: 1)
-                    }.padding()
+                        .font(.system(size: 16))
+                        .padding(10)
+                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
+                        .frame(width: 250)
+                    }
+                    .padding(.bottom, 6)
                     VStack() {
                         HStack {
                             Image(systemName: "info.circle")
                             TextField("Type things about your pet", text: $about)
                         }
-                        .font(.system(size: 18))
-                        .padding(.vertical, 10) // adjust top and bottom padding values
-                            .padding(.horizontal, 15)
-                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 15, tr: 15, bl: 15, br: 0))
-                        .frame(width: 260)
-                        .shadow(color: .black, radius: 1)
-                    }.padding()
+                        .font(.system(size: 16))
+                        .padding(10)
+                        .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
+                        .frame(width: 250)
+                    }
+                    .padding(.bottom, 15)
                     VStack() {
                         Text("Birthdate")
                         VStack(alignment: .leading) {
                             DatePicker(
                                 selection: $birthdate,
-                                label: { /*@START_MENU_TOKEN@*/Text("Date")/*@END_MENU_TOKEN@*/ }
+                                label: { Text("") }
                             )
                             .font(.system(size: 15))
                                 .padding(15)
-                                .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 15, tr: 15, bl: 15, br: 0))
-                                .frame(width: 280)
-                                .shadow(color: .black, radius: 1)
-                        }.padding()
+                                .background(CustomRoundedCorners(color: Color("BackgroundSecondary"), tl: 10, tr: 10, bl: 10, br: 0))
+                                .frame(width: 250)
+                        }
+                        .padding(.bottom, 30)
                     }
                     /*VStack() {
                         Text("Gender")
@@ -124,8 +122,8 @@ struct EditProfileView: View {
                         }
                         .foregroundColor(.white)
                         .padding(10)
-                        .font(.system(size: 28))
-                        .frame(width: 280)
+                        .font(.system(size: 20))
+                        .frame(width: 250)
                         .background(
                             LinearGradient(
                                 gradient: Gradient(colors: [Color("SecondaryColor"), Color("AccentColor")]),
@@ -133,9 +131,8 @@ struct EditProfileView: View {
                                 endPoint: .trailing
                             )
                         )
-                        .cornerRadius(15)
+                        .cornerRadius(10)
                         .labelStyle(DefaultLabelStyle())
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     }.padding()
                 }
                 .padding()

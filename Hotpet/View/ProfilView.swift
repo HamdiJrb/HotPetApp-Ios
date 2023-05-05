@@ -26,14 +26,15 @@ struct ProfileView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
+            VStack {
+                Spacer().frame(height: 75)
                 AsyncImage(url: URL(string: IMAGES_URL + (user.imageFilename ?? ""))!) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 115, height: 115)
                         .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                        //.overlay(Circle().stroke(Color.white, lineWidth: 4))
                         .shadow(radius: 10)
                 } placeholder: {
                     Image("placeholder-pet")
@@ -49,6 +50,7 @@ struct ProfileView: View {
                     Text(user.username + ", " + String(DateUtils.getAge(date: user.birthdate)) + "yo").bold()
                         .font(.custom("Nexa-Bold", size: 22))
                 }.frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.bottom, 10)
                 HStack {
                     Spacer().frame(width: 40)
                 
@@ -94,6 +96,14 @@ struct ProfileView: View {
                 }.frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 60)
             }
+            .background(
+                        Image("backrgound_image")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height:70)
+                            .edgesIgnoringSafeArea(.all)
+                            .padding(.top, -150)
+                    )
             Spacer().frame(height: 35)
             Text("Posts")
                 .frame(maxWidth: .infinity, alignment: .leading)

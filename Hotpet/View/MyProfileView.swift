@@ -30,15 +30,15 @@ struct MyProfileView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
-                Spacer().frame(height: 10)
+            VStack {
+                Spacer().frame(height: 120)
                 AsyncImage(url: URL(string: IMAGES_URL + (user.imageFilename ?? ""))!) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 115, height: 115)
+                        .frame(width: 110, height: 110)
                         .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                    //.overlay(Circle().stroke(Color.gray, lineWidth: 1))
                         .shadow(radius: 10)
                 } placeholder: {
                     Image("placeholder-pet")
@@ -49,11 +49,14 @@ struct MyProfileView: View {
                         .overlay(Circle().stroke(Color.white, lineWidth: 4))
                         .shadow(radius: 10)
                 }
+                .padding(.bottom, 10)
+                
                 
                 HStack {
                     Text(loadSession()!.username + ", " + String(DateUtils.getAge(date: loadSession()!.birthdate)) + "yo").bold()
                         .font(.custom("Nexa-Bold", size: 22))
                 }.frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.bottom, 20)
                 ////// // settings button
                 ///
                 //////////////
@@ -96,7 +99,8 @@ struct MyProfileView: View {
                         })
                     Spacer().frame(width: 40)
                 }
-                Spacer().frame(height: 2)
+                //Spacer().frame(height: 2)
+                .padding(.bottom, 10)
                 VStack (spacing: 15) {
                     HStack {
                         Image(systemName: "info.circle.fill")
@@ -105,15 +109,15 @@ struct MyProfileView: View {
                             .font(.system(size: 16))
                     }.frame(maxWidth: .infinity, alignment: .leading)
                     /*HStack {
-                        Image(systemName: "person.text.rectangle")
-                            .font(.system(size: 20, weight: .heavy))
-                        Text(loadSession()!.username + " " + String(DateUtils.getAge(date: loadSession()!.birthdate)) + "yo")
-                    }.frame(maxWidth: .infinity, alignment: .leading)*/
+                     Image(systemName: "person.text.rectangle")
+                     .font(.system(size: 20, weight: .heavy))
+                     Text(loadSession()!.username + " " + String(DateUtils.getAge(date: loadSession()!.birthdate)) + "yo")
+                     }.frame(maxWidth: .infinity, alignment: .leading)*/
                     /*HStack {
-                        Image(systemName: "calendar")
-                            .font(.system(size: 20, weight: .heavy))
-                        Text("Age : " + String(DateUtils.getAge(date: loadSession()!.birthdate)))
-                    }.frame(maxWidth: .infinity, alignment: .leading)*/
+                     Image(systemName: "calendar")
+                     .font(.system(size: 20, weight: .heavy))
+                     Text("Age : " + String(DateUtils.getAge(date: loadSession()!.birthdate)))
+                     }.frame(maxWidth: .infinity, alignment: .leading)*/
                     HStack {
                         Image(systemName: "pawprint.fill")
                             .font(.system(size: 15, weight: .heavy))
@@ -129,6 +133,16 @@ struct MyProfileView: View {
                 }.frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 60)
             }
+            .background(
+                        Image("backrgound_image")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height:70)
+                            .edgesIgnoringSafeArea(.all)
+                            .padding(.top, -160)
+                    )
+            
+        
             Spacer().frame(height: 35)
             Text("Posts")
                 .frame(maxWidth: .infinity, alignment: .leading)
