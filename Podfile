@@ -13,5 +13,7 @@ target 'Hotpet' do
   pod 'FacebookLogin'
   pod 'GoogleSignIn'
   pod 'GoogleSignInSwiftSupport'
+  pod 'StripePaymentSheet'
+  pod 'Paymee', '~> 1.0.2'
 
 end

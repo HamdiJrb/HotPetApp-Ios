@@ -7,9 +7,12 @@
 
 import SwiftUI
 import GoogleSignIn
+import StripeCore
 
 @main
 struct HotpetApp: App {
+    
+    
     var body: some Scene {
         WindowGroup {
             SplashScreenView()

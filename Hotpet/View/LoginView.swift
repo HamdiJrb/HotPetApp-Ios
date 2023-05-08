@@ -107,13 +107,18 @@ struct LoginView: View {
                             MainView()
                         })
                     }.padding(.bottom, 4)
-                        /*Text("OR")
+                        Text("OR")
                             .fontWeight(.medium)
                             .foregroundColor(Color("SecondaryColor"))
                             .padding(.bottom, 4)
-                    GoogleSignInButton(action: handleSignInButton)
-                        .frame(width: 250)
-                        .padding(.bottom, 30)*/
+                    NavigationLink(destination: RegisterNextView(email: email,
+                                                                 password: password,
+                                                                 username: "username")) {
+                        GoogleSignInButton(action: handleSignInButton)
+                            .frame(width: 250)
+                            .padding(.bottom, 30)
+                    }
+
                     HStack{
                         Text("You don't have an account ?")
                             .fontWeight(.bold)

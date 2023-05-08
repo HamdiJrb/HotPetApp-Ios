@@ -204,23 +204,23 @@ struct EditProfileView: View {
             return
         }
         
-        if(selectedGender == 0){
+        /*if(selectedGender == 0){
             alert = AlertMaker.makeAlert(
                 title: "Warning",
                 message: "You should specify the gender"
             )
             showingAlert = true
             return
-        }
+        }*/
         
-        if(selectedCategory == 0){
+        /*if(selectedCategory == 0){
             alert = AlertMaker.makeAlert(
                 title: "Warning",
                 message: "You should specify the category"
             )
             showingAlert = true
             return
-        }
+        }*/
         
         gender = genders[selectedGender]
         category = categories[selectedCategory]

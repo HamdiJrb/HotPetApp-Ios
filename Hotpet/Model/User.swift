@@ -49,6 +49,11 @@ enum Gender: Codable {
     }
 }
 
+enum UserRole {
+    case regular
+    case premium
+}
+
 enum Category: Codable {
     case Cat
     case Dog

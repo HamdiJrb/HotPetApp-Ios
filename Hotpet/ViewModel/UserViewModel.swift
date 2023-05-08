@@ -318,4 +318,62 @@ class UserViewModel: ObservableObject {
             isVerified: jsonItem["isVerified"].boolValue
         )
     }
+    
+    func sendResetPassword(email: String, completed: @escaping (Bool, String?) -> Void) {
+            AF.request(BASE_URL + "user/forgot-password",
+                       method: .post,
+                       parameters: ["email": email.replacingOccurrences(of: " ", with: "").lowercased()])
+                .validate(statusCode: 200..<300)
+                .validate(contentType: ["application/json"])
+                .responseData { response in
+                    switch response.result {
+                    case .success:
+                        let jsonResponse = JSON(response.data!)
+                        let message = jsonResponse["message"].stringValue
+                        completed(true, message)
+                    case let .failure(error):
+                        debugPrint(error)
+                        completed(false, nil)
+                    }
+                }
+        }
+    
+    func verifyResetCode(typedResetCode: String, token: String, completed: @escaping (Bool) -> Void) {
+        AF.request(BASE_URL + "user/verify-reset-code",
+                   method: .post,
+                   parameters: ["typedResetCode": typedResetCode, "token": token])
+            .validate(statusCode: 200..<300)
+            .validate(contentType: ["application/json"])
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    completed(true)
+                case let .failure(error):
+                    debugPrint(error)
+                    completed(false)
+                }
+            }
+    }
+    
+    func updatePassword(email: String, password: String, completed: @escaping (Bool) -> Void) {
+        let parameters = ["email": email, "password": password]
+        AF.request(BASE_URL + "user/update-password",
+                   method: .put,
+                   parameters: parameters)
+            .validate(statusCode: 200..<300)
+            .validate(contentType: ["application/json"])
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    completed(true)
+                case let .failure(error):
+                    debugPrint(error)
+                    completed(false)
+                }
+            }
+    }
+
+
+
+
 }

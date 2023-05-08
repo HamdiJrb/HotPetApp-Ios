@@ -9,11 +9,12 @@ import SwiftUI
 
 struct MatchesView: View {
     
-    
     @State private var likeList: [Like] = []
     @State private var searchText = ""
     
-   
+    @State private var isPremium = false
+    @State private var showingAlert = false
+    @State private var alert: Alert?
     
     var body: some View {
         VStack {
@@ -21,24 +22,53 @@ struct MatchesView: View {
             List(likeList.filter{
                 searchText.isEmpty ? true : $0.liker!.username.localizedCaseInsensitiveContains(searchText)
             }, id: \._id) { like in
-                Button(action: {
-                    //like(user: like.liker!, isRight: true)
-                }) {
+                if isPremium {
+                    Button(action: {
+                        //like(user: like.liker!, isRight: true)
+                    }) {
+                        MatchCell(user: like.liker!)
+                    }
+                } else {
                     MatchCell(user: like.liker!)
+                        .blur(radius: 5)
                 }
             }
-
-            /*List(likeList.filter{
-                searchText.isEmpty ? true : $0.liker!.username.localizedCaseInsensitiveContains(searchText)
-            }, id: \._id) { like in
-                NavigationLink(destination: ProfileView(user: like.liker!)) {
-                    MatchCell(user: like.liker!)
-                }
-            }*/
-        }.navigationBarHidden(true)
+        }
+        .navigationBarHidden(true)
         .onAppear {
             loadData()
         }
+        .overlay(
+            isPremium ?
+                nil :
+                Button(action: {
+                    isPremium = true
+                    alert = AlertMaker.makeAlert(
+                        title: "Congratulations !",
+                        message: "Now you can see your matches"
+                    )
+                    showingAlert = true
+                }) {
+                    Text("Go Premium")
+                        .foregroundColor(.white)
+                }
+                .font(.system(size: 20).weight(.semibold))
+                .padding(10)
+                .frame(width: 250)
+                .background(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Color("SecondaryColor"), Color("AccentColor")]),
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                )
+                .cornerRadius(15)
+                .foregroundColor(.white)
+                .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+            )
+        .alert(isPresented: $showingAlert) {
+                alert!
+            }
     }
     
     func loadData() {

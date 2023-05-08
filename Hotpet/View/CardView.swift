@@ -182,12 +182,12 @@ struct UserInfoView: View {
                     HStack{}
                     Text(user.username + ", " + String(DateUtils.getAge(date: user.birthdate)) + "yo")
                         .foregroundColor(Color.black)
-                        .font(.system(size: 24))
-                        .fontWeight(.heavy)
+                        .font(.system(size: 20).weight(.medium))
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Text(user.about)
-                        .font(.system(size: 20))
+                        .font(.system(size: 17).weight(.medium))
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(Color.secondary)
                 }
                 //Text(String(DateUtils.getAge(date: user.birthdate)) + "yo")
                     //.frame(width: 30, height: 30, alignment: .center)
