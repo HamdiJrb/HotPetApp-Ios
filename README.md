@@ -35,6 +35,7 @@ Users can filter the displayed pets on the discover by age, category and distanc
 <p align="center">
  <img src="Screenshots/filtering.jpg" alt="login" width="300" >
 </p>
+
 • **Chat**
 Users can initiate conversations with other pet owners through a built-in messaging system to arrange playdates or discuss common interests.
 <p align="center">
