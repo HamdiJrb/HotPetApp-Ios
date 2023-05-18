@@ -14,7 +14,7 @@ Whether you're looking for playdates, friendship, or even love for your furry co
 • **User registration and authentication** 
 Users can create an account, log in, and manage their profile
 <p align="center">
- <img src="./Screenshots/.png" alt="login" width="300" >
+ <img src="./Screenshots/signup.png" alt="login" width="300" >
 </p>
 
 
