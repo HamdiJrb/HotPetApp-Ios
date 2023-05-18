@@ -11,32 +11,32 @@ Whether you're looking for playdates, friendship, or even love for your furry co
 
 ## 📑 Features
 
-• **User registration and authentication** :
+• **User registration and authentication** : <br>
 Users can create an account, log in, and manage their profile
 <p align="center">
  <img src="Screenshots/signup.jpg" alt="login" width="300" >
 </p>
 
-• **Profile creation and management** :
+• **Profile creation and management** : <br>
 Users can create profiles for their pets, including uploading pictures and providing information about their pets' breed, age, and interests.
 <p align="center">
  <img src="Screenshots/profile.jpg" alt="login" width="300" >
   <img src="Screenshots/profile_update.jpg" alt="login" width="300" >
 </p>
 
-• **Matching** :
+• **Matching** : <br>
 HotPet uses a matching algorithm to suggest potential matches based on pet compatibility and user preferences.
 <p align="center">
  <img src="Screenshots/matching.jpg" alt="login" width="300" >
 </p>
 
-• **Filtering** :
+• **Filtering** : <br>
 Users can filter the displayed pets on the discover by age, category and distance.
 <p align="center">
  <img src="Screenshots/filtering.jpg" alt="login" width="300" >
 </p>
 
-• **Chat** :
+• **Chat** : <br>
 Users can initiate conversations with other pet owners through a built-in messaging system to arrange playdates or discuss common interests.
 <p align="center">
  <img src="Screenshots/chat.jpg" alt="login" width="300" >
@@ -44,10 +44,10 @@ Users can initiate conversations with other pet owners through a built-in messag
 
 ## 📑 Technologies Used
 
-• iOS development using Swift and Xcode
-• Backend development using Node.js
-• Database management using MongoDB
-• Integration of Google Sign-In for user authentication
+• iOS development using Swift and Xcode <br>
+• Backend development using Node.js <br>
+• Database management using MongoDB <br>
+• Integration of Google Sign-In for user authentication <br>
 • Geolocation services for proximity-based search and event recommendations
 
 ## ⤵️ Installation
