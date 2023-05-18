@@ -11,32 +11,32 @@ Whether you're looking for playdates, friendship, or even love for your furry co
 
 ## 📑 Features
 
-• **User registration and authentication** 
+• **User registration and authentication** :
 Users can create an account, log in, and manage their profile
 <p align="center">
  <img src="Screenshots/signup.jpg" alt="login" width="300" >
 </p>
 
-• **Profile creation and management**
+• **Profile creation and management** :
 Users can create profiles for their pets, including uploading pictures and providing information about their pets' breed, age, and interests.
 <p align="center">
  <img src="Screenshots/profile.jpg" alt="login" width="300" >
   <img src="Screenshots/profile_update.jpg" alt="login" width="300" >
 </p>
 
-• **Matching**
+• **Matching** :
 HotPet uses a matching algorithm to suggest potential matches based on pet compatibility and user preferences.
 <p align="center">
  <img src="Screenshots/matching.jpg" alt="login" width="300" >
 </p>
 
-• **Filtering**
+• **Filtering** :
 Users can filter the displayed pets on the discover by age, category and distance.
 <p align="center">
  <img src="Screenshots/filtering.jpg" alt="login" width="300" >
 </p>
 
-• **Chat**
+• **Chat** :
 Users can initiate conversations with other pet owners through a built-in messaging system to arrange playdates or discuss common interests.
 <p align="center">
  <img src="Screenshots/chat.jpg" alt="login" width="300" >
